@@ -35,3 +35,21 @@ class Solution:
                 else:
                     total+=1000
         return total
+
+ class Solution:
+    def romanToInt(self, s: str) -> int:
+        number = {
+            "I":1,
+            "V":5,
+            "X":10,
+            "L":50,
+            "C":100,
+            "D":500,
+            "M":1000
+        }
+        srep = s.replace("IV", "IIII").replace("IX", "VIIII").replace("XL", "XXXX")\
+        .replace("XC","LXXXX").replace("CD", "CCCC").replace("CM","DCCCC")
+        total = 0
+        for i in srep:
+            total += number[i]
+        return total
