@@ -4,7 +4,7 @@ class Solution:
         freq = list(counter.values())
         freq.sort()
         
-        ans, removed, half = 0, 0, len(arr) // 2
+        ans, removed, half = 0, 0, math.ceil(len(arr)/2)
         while removed < half:
             ans += 1
             removed += freq.pop()
@@ -22,7 +22,7 @@ class Solution:
         freq = list(counter.values())
         freq.sort()
         
-        ans, removed, half = 0, 0, len(arr) // 2
+        ans, removed, half = 0, 0, math.ceil(len(arr)/2)
         while removed < half:
             ans += 1
             removed += freq.pop()
