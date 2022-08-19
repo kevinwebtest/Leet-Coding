@@ -1,3 +1,4 @@
+from collections import Counter
 class Solution:
     def minSetSize(self, arr: List[int]) -> int:
         cnt = Counter(arr)
