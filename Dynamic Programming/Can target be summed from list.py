@@ -33,5 +33,7 @@ def canSum(target, numbers, memo = {}):
 
 memo ={}
 print(canSum(7,[2,3])) #True
+memo ={}
 print(canSum(7,[4,2])) #False
+memo ={}
 print(canSum(300,[14,7],memo),memo) #False
