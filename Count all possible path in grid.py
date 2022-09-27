@@ -1,3 +1,4 @@
+# Count all possible path from top left to bottom right
 def twoDimensionalGrid(m,n,smallerGrid={}):
   if m==0 or n==0:
     return 0
