@@ -32,4 +32,6 @@ def canSum(target, numbers, memo = {}):
   return False
 
 memo ={}
-print(canSum(300,[14,7,15],memo),memo)
+print(canSum(7,[2,3])) #True
+print(canSum(7,[4,2])) #False
+print(canSum(300,[14,7],memo),memo) #False
