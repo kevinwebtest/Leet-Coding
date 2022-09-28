@@ -3,7 +3,7 @@ def oneSumComb(target, numbers, memo={}):
     return memo[target]
   if target == 0:
     return []
-  if target < 1:
+  if target < 0:
     return None
   for num in numbers:
     remainder = target - num
