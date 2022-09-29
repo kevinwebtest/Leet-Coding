@@ -8,7 +8,7 @@ def canWordComb(target, words, memo={}):
     if target.startswith(word) == True:
       sliced = target[len(word):]
       canWC = canWordComb(sliced, words, memo)
-      memo[sliced] = canWC
+      memo[target] = canWC
       if canWC == True:
         return True
   return False
@@ -24,9 +24,9 @@ def canWordComb(target, words, memo={}):
       sliced = target[len(word):]
       canWC = canWordComb(sliced, words, memo)
       if canWC == True:
-        memo[sliced] = True
+        memo[target] = True
         return True
-  memo[sliced] = False
+  memo[target] = False
   return False
 
 
