@@ -22,4 +22,4 @@ def allPathGrid(m,n):
       if j+1<=n:
         grid[i][j+1] +=  grid[i][j]
   return grid[m][n]
-print(allPathGrid(3,3))
+print(allPathGrid(3,3)) #6
