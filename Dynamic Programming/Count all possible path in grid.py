@@ -10,3 +10,16 @@ def twoDimensionalGrid(m,n,smallerGrid={}):
   smallerGrid[mn] = twoDimensionalGrid(m-1,n,smallerGrid) + twoDimensionalGrid(m,n-1,smallerGrid)
   return smallerGrid[mn]
 print(twoDimensionalGrid(18,18))
+
+
+def allPathGrid(m,n):
+  grid = [[0 for y in range(n+1)] for x in range(m+1)]
+  grid[1][1] = 1
+  for i in range(m+1):
+    for j in range(n+1):
+      if i+1<=m:
+        grid[i+1][j] +=  grid[i][j]
+      if j+1<=n:
+        grid[i][j+1] +=  grid[i][j]
+  return grid[m][n]
+print(allPathGrid(3,3))
