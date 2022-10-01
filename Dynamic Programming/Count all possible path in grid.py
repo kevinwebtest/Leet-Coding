@@ -1,4 +1,5 @@
 # Count all possible path from top left to bottom right
+# Recursive version
 def twoDimensionalGrid(m,n,smallerGrid={}):
   if m==0 or n==0:
     return 0
@@ -11,7 +12,7 @@ def twoDimensionalGrid(m,n,smallerGrid={}):
   return smallerGrid[mn]
 print(twoDimensionalGrid(18,18))
 
-
+# Tabular version
 def allPathGrid(m,n):
   grid = [[0 for y in range(n+1)] for x in range(m+1)]
   grid[1][1] = 1
