@@ -1,4 +1,5 @@
 # Check if the list numbers can added up to the target (Every number can be used more than once)
+# Recursive version
 def canSum(target, numbers, memo = {}):
   if target in memo:
     return memo[target]
@@ -31,6 +32,7 @@ def canSum(target, numbers, memo = {}):
       return True
   return False
 
+# Tabular version
 print(canSum(7,[2,3],{}) #True
 print(canSum(7,[4,2],{}) #False
 # Hati-hati karena python ingat memo/dictionary yang di dalam function ketika pemanggilan selanjutnya jika memo dikosongkan saat pemanggilan function
