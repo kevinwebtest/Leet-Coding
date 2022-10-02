@@ -1,3 +1,4 @@
+# Recursive version
 # (?) Jawaban error/salah padahal syntax sama persis dengan yg javascript 
 def shortestSumComb(target, numbers, memo={}):
   if target in memo:
@@ -27,7 +28,7 @@ print(shortestSumComb(8,[1,4,5],memo),memo) #[4, 4]
 print(shortestSumComb(7,[4,2],{})) #None
 print(shortestSumComb(300,[14,7,15],{})) #None
 
-
+# Tabular version
 def bestSumComb(target, numbers):
   combination = [None for i in range(target+1)]
   combination[0] = []
