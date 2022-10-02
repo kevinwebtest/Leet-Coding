@@ -8,7 +8,7 @@ def allWordComb(target, words,memo={}):
     if target.startswith(word) == True:
       sliced = target[len(word):]
       wordCombs = allWordComb(sliced,words,memo)
-      if len(x)>0:
+      if len(wordCombs)>0:
         for wordComb in wordCombs:
           wordComb.insert(0,word)
       output += wordCombs
