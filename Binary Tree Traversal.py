@@ -24,9 +24,9 @@ class Solution:
             self.preorder(myroot.left, output2)
             self.preorder(myroot.right, output2)
             
-    def inorder(self, myroot, output3):
+    def postorder(self, myroot, output3):
         if myroot:
-            self.inorder(myroot.left, output3)
-            self.inorder(myroot.right, output3)
+            self.postorder(myroot.left, output3)
+            self.postorder(myroot.right, output3)
             output3.append(myroot.val)
     
