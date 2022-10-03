@@ -41,3 +41,19 @@ class Solution:
                 stack.append(node.right)
                 stack.append(node.left)
         return ret
+    
+class Solution:
+    def postorderTraversal(self, root: Optional[TreeNode]) -> List[int]:
+        output = []
+        stack = [[root, False]]
+        while stack:
+            nowroot, visited = stack.pop()
+            if nowroot:
+                if visited:
+                    output.append(nowroot.val)
+                else:
+                    stack.append([nowroot, True])
+                    stack.append([nowroot.right, False])
+                    stack.append([nowroot.left, False])
+        return output
+
