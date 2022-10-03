@@ -8,8 +8,8 @@ class Solution:
     def Traversal(self, root: Optional[TreeNode]) -> List[int]:
         output1,output2,output3 =[],[],[]
         self.inorder(root, output1)
-        self.inorder(root, output2)
-        self.inorder(root, output3)
+        self.preorder(root, output2)
+        self.postorder(root, output3)
         return output1,output2,output3
         
     def inorder(self, myroot, output1):
