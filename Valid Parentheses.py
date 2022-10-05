@@ -7,6 +7,9 @@ class Solution:
             else:
                 if len(stack) == 0:
                     return False
-                else:
-                    stack.pop()
+                lastappendstack = stack.pop()
+                if (((i == ")") & (lastappendstack !="(")) \
+                    | ((i == "]") & (lastappendstack !="[")) \
+                    | ((i == "}") & (lastappendstack !="{"))):
+                    return False
         return len(stack) == 0
