@@ -27,3 +27,5 @@ def getMinCost(val, t_nodes, t_from, t_to):
 
     dfs(0, -1)
     return dp[0][0]
+print(getMinCost([2,1,1], 3, [1,1], [2,3]))
+print(getMinCost([3, 2, 4, 2, 5], 5, [1, 1, 3, 5],  [2, 3, 4, 5]))
