@@ -9,3 +9,17 @@ class Solution:
                 maxLength = max(maxLength, i-start+1)
             char[ch] = i
         return maxLength
+
+class Solution:
+    def lengthOfLongestSubstring(self, s: str) -> int:
+        longest = ""
+        substring = ""
+        for i in range(len(s)):
+            if s[i] not in substring:
+                substring += s[i]
+            else:
+                idx = substring.index(s[i])
+                substring = substring[idx+1:] + s[i]
+            if len(substring) > len(longest):
+                longest = substring
+        return len(longest)
