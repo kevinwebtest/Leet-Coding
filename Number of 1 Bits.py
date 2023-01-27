@@ -18,7 +18,7 @@ class Solution:
 
 class Solution:
     def hammingWeight(self, n: int) -> int:
-        binary = bin(n).replace("0bx","")
+        binary = bin(n).replace("0b","")
         count=0
 
         for i in binary:
