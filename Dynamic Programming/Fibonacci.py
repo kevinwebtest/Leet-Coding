@@ -6,12 +6,12 @@ def fib(n, memo={}):
     return 0
   if n==1:
     return 1
-  memo[n] = fib(n-1)+fib(n-2)
+  memo[n] = fib(n-1,memo)+fib(n-2,memo)
   return memo[n]
 print(fib(50)) #12586269025def 
 
 # Tabular version
-fib2(n):
+def fib2(n):
   fibo = [0 for i in range(n+3)]
   fibo[1] = 1
   for num in range(n+1):
