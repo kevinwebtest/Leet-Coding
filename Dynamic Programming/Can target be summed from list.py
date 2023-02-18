@@ -32,8 +32,8 @@ def canSum(target, numbers, memo = {}):
       return True
   return False
 
-print(canSum(7,[2,3],{}) #True
-print(canSum(7,[4,2],{}) #False
+print(canSum(7,[2,3],{})) #True
+print(canSum(7,[4,2],{})) #False
 # Hati-hati karena python ingat memo/dictionary yang di dalam function ketika pemanggilan selanjutnya jika memo dikosongkan saat pemanggilan function
 memo ={}
 print(canSum(300,[14,7],memo),memo) #False

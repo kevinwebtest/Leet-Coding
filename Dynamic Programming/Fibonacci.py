@@ -20,3 +20,20 @@ def fib2(n):
   return fibo[n]
 print(fib2(50))
 
+
+def fib3(n):
+  if n==0:
+    return 0
+  results=[0,1]
+  res = 0
+  for i in range(n-1):
+    res = results[i]+results[i+1]
+    results.append(res)
+  return results[n]
+
+print(fib3(50))
+
+# i=0 -> res[2]=1
+# i=1 -> res[3]=2
+# i=2 -> res[4]=3
+# i=3 -> res[5]=5
