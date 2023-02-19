@@ -36,7 +36,7 @@ class Solution:
                     total+=1000
         return total
 
- class Solution:
+class Solution:
     def romanToInt(self, s: str) -> int:
         number = {
             "I":1,
