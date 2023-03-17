@@ -8,7 +8,7 @@ def fib(n, memo={}):
     return 1
   memo[n] = fib(n-1,memo)+fib(n-2,memo)
   return memo[n]
-print(fib(50)) #12586269025def 
+print(fib(50)) #12586269025
 
 # Tabular version
 def fib2(n):
