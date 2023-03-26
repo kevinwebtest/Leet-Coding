@@ -31,7 +31,7 @@ def fib3(n):
     results.append(res)
   return results[n]
 
-print(fib3(50))
+print(fib3(50))#12586269025
 
 # i=0 -> res[2]=1
 # i=1 -> res[3]=2
